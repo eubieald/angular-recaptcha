@@ -1,0 +1,12 @@
+<h2>Angular reCAPTCHA v2 Example</h2>
+
+<form (ngSubmit)="onSubmit()" #myForm="ngForm">
+  <re-captcha
+    siteKey="6Lc-jvQrAAAAABiAm9Moe2mt-DyoA-x-FYo6JysH"
+    (resolved)="onCaptchaResolved($event)"
+  >
+  </re-captcha>
+
+  <br />
+  <button type="submit" [disabled]="!captchaResolved">Submit</button>
+</form>
